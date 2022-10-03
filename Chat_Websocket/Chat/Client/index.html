@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Full House</title>
+        <link rel="stylesheet" href=Stylesheet.css>
+    </head>
+    <body>
+        <h1>Full House - Der beste Chat!</h1>
+        <p id="state">Bereit zum verbinden</p>
+        <div>
+            <label for="userName">Benutzername: </label>
+            <input id="userName"/>
+            <button id="connectButton" type="button">verbinden</button>
+        </div>
+        <div class="options">
+            <label for="sendMessage">Nachricht senden an </label>
+            <input id="sendMessage" disabled/>
+            <select name="usersList" id="userList" disabled>
+                <option value="">Alle</option>
+            </select>
+            <button id="sendButton" type="button" disabled>Senden</button>
+            <button id="closeButton" disabled>Verbindung beenden</button>
+        </div>
+        <h2>Chat</h2>
+        <div id="chatLog"></div>
+        <script src="client.js"></script>
+    </body>
+</html>

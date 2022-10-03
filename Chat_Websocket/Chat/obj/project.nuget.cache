@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1wAP6hxN2n+m0Z+8YkLPheZ5IQjLERs18qSl+0DqLn5SWzUQ3ylsv5dwi8IUnx5yCdDRGxWhFrCu/qc4JbuZ7g==",
+  "success": true,
+  "projectFilePath": "/Users/chiarazefferer/Desktop/WebService/Chat_Websocket/Chat/ChatApp.csproj",
+  "expectedPackageFiles": [
+    "/Users/chiarazefferer/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.29/microsoft.netcore.app.host.osx-x64.3.1.29.nupkg.sha512"
+  ],
+  "logs": []
+}

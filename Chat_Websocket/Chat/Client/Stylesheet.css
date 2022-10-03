@@ -1,0 +1,24 @@
+h1,h2 { 
+	font-family: "Verdana", "sans-serif";
+	font-weight: bold; }
+h1 {
+	font-size: 3em;
+   	height:40px;
+	color: rgba(199, 96, 96, 0.76);	
+}
+h2{
+    font-size: 2em;
+    height:20px;
+	color: rgba(43, 48, 99, 0.76);
+}
+p{
+	font-family: "Georgia", "serif";
+	color: black;
+}
+body {
+	background-color: rgba(230, 226, 226, 0.69);
+} 
+div.options{
+	font-family: "Georgia", "serif";
+	color: black;
+}

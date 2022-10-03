@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/chiarazefferer/.dotnet/store/|arch|/|tfm|",
+      "/Users/chiarazefferer/.nuget/packages"
+    ]
+  }
+}
