@@ -3,9 +3,9 @@ Author: Chiara Zefferer
 
 
 # WebSocket Chat in ASP.NET Core
-Diese Projekt beinhaltet eine Chat-App, die Implementierung erfolgt über einen ASP.NET Core WebSocket Server und einen sehr einfachen Client in HTML und JavaScript. Verwendet werden kann das Projekt in Visual Studio Code (MacBook) oder Visual Studio 2019.
+Dieses Projekt beinhaltet eine Chat-App, die Implementierung erfolgt über einen ASP.NET Core WebSocket Server und einen sehr einfachen Client in HTML und JavaScript. Verwendet werden kann das Projekt in Visual Studio Code oder Visual Studio 2019.
 
-ASP.NET Core ist ein kostenloses Open-Source-Webframewort, dass von Microsoft entwicket wurde.
+ASP.NET Core ist ein kostenloses Open-Source-Webframework, dass von Microsoft entwickelt wurde.
 
 ## Download für Visual Studio 2019 & Visual Studio Code
 https://visualstudio.microsoft.com/de/vs/older-downloads/
@@ -19,12 +19,12 @@ https://learn.microsoft.com/de-de/aspnet/core/getting-started/?source=recommenda
 
 ## How-to Websocket
 https://www.youtube.com/watch?v=BNZLQCmL1mA&list=PLx3k0RGeXZ_wZ_gYpYXfH6FTK7e0cDL0k
-In dieser Reihe von Videos werden WebSockets in verschiedenen Programmiersprachen und Varianten erklärt und programmiert, falls man noch keine Erfahrungen mit Websockets hat sind diese Videos sehr zu Empfehlen um zu verstehen wie alles abläuft. 
+In dieser Reihe von Videos werden WebSockets in verschiedenen Programmiersprachen und Varianten erklärt und programmiert, falls man noch keine Erfahrungen mit Websockets hat sind diese Videos sehr zu Empfehlen, um zu verstehen wie alles abläuft. 
 
 ## How-to Projekt starten
 1. Clone das Projekt an einen beliebigen Ort auf deinem Laptop
 2. Öffne die Console/das Terminal und navigiere zum Projekt `Chat`
-3. führe das Command `dotnet run`aus
+3. führe das Command `dotnet run` aus
 4. Öffne das Dokument `.\Client\index.html`
 Es können mehrere Clients in unterschiedlichen Browsern geöffnet werden.
 Der Client verbindet sich mit dem port `5000` in `localhost`.
@@ -32,13 +32,13 @@ Der Client verbindet sich mit dem port `5000` in `localhost`.
 ## Hauptbestandteile
 1. ConnectionManager: zeichnet verbundenen Benutzer und aktive Sockets auf und kümmert sich um das Abrufen, Hinzufügen und Entfernen der Aufzeichnungen
 2. WebSocketHandler: behandelt Vorgänge wie das Senden und Empfangen von Nachrichten, die Behandlung von Verbindungs- und Trennungsereignissen.
-3. WebSocketMiddleware: wenn ein WebSocket request empfangen wird, wird die Verbidnung akzeptiert und der Socket an die OnConnected Methode vom Handler weitergeleitet. Es werden auch die eindeutigen Benutzernamen überprüft und auf neue Daten gewartet, solange sich der Socket im Zusand Open befindet. 
+3. WebSocketMiddleware: wenn ein WebSocket request empfangen wird, wird die Verbindung akzeptiert und der Socket an die OnConnected Methode vom Handler weitergeleitet. Es werden auch die eindeutigen Benutzernamen überprüft und auf neue Daten gewartet, solange sich der Socket im Zustand Open befindet. 
 
 ## Unique Benutzer
 Eine Anforderung für das Projekt ist, dass der Benutzername eindeutig sein muss.
 Dies wurde implementiert mit `ws://localhost:5000/ws?username=`. 
-Der Server validiert ob  `username` ein gütliger Benutzername ist (uniqe, nicht leer), falls ja wird zu den Benutzern/Sockets hinzugefügt, andernfalls wird der Socket geschlossen.
-Was man beachten sollte, ist das sensible Daten nicht in so einem query string offengelegt werden sollten, auch nicht wenn HTTPS oder WSS verwendet ist (der Inhalt ist zwar verschlüsselt, aber die URL könnte z.B. in Serverprotokollen aufgezeichnet werden).
+Der Server validiert ob  `username` ein gütliger Benutzername ist (uniqe, nicht leer), falls ja wird er zu den Benutzern/Sockets hinzugefügt, andernfalls wird der Socket geschlossen.
+Was man beachten sollte, ist das sensible Daten nicht in so einem query string offengelegt werden sollten, auch nicht wenn HTTPS oder WSS verwendet wird (der Inhalt ist zwar verschlüsselt, aber die URL könnte z.B. in Serverprotokollen aufgezeichnet werden).
 
 ## Message
 1. `ClientMessage`: ist die vom Client an den Server gesendete Nachricht. Diese enthält folgende Attribute:
